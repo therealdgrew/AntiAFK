@@ -1,0 +1,39 @@
+#IslandFlyAddon Configuration 1.0.0
+#General settings
+general:
+  #This allows you to change the messages prefix.
+  prefix: "§a§lAntiAFK §8| §f"
+  #This allows you to change the invalid location message.
+  invalid: "§cThis command cannot be run here!"
+  #This allows you to change the hunger level that prohibits the player from mining/fishing.
+  min-food-level: 6
+#Mining settings
+block-breaking:
+  #This allows you to change the amount of blocks required to be broken to force a food level decrease.
+  amount: 28
+  #This allows you to change the mining limit message.
+  message: "§fYou are tired! Eat something to be able to break blocks."
+  #This list allows you to add blocks to a whitelist, meaning you can allow players to break them while hungry.
+  #By default this includes crops, leaves and fire so players wouldn't be stuck with no hunger.
+  #Please be sure to properly format the list with Material item IDs!
+  #You can look up the latest Material list here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+  block-list:
+  - "WHEAT"
+  - "POTATOES"
+  - "BEETROOTS"
+  - "CARROTS"
+  - "MELON"
+  - "PUMPKIN"
+  - "OAK_LEAVES"
+  - "BIRCH_LEAVES"
+  - "SPRUCE_LEAVES"
+  - "ACACIA_LEAVES"
+  - "JUNGLE_LEAVES"
+  - "DARK_OAK_LEAVES"
+  - "FIRE"
+#Fishing settings
+fishing:
+  #This allows you to change the amount of fish required to be caught to force a food level decrease.
+  amount: 5
+  #This allows you to change the fishing limit message.
+  message: "§fYou are tired! Eat something to be able to fish."

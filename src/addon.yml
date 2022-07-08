@@ -1,0 +1,17 @@
+name: AntiAFK
+main: ru.dgrew.antiafk.AntiAFK
+version: 1.0.0
+api-version: 1.16
+authors:
+  - DGrew
+softdepend: AcidIsland, BSkyBlock, CaveBlock, SkyGrid
+commands:
+  aafk:
+    aliases: [antiafk]
+permissions:
+  antiafk.admin:
+    description: Access to the debug command
+    default: false
+  antiafk.bypass:
+    description: Excepts user from AntiAFK checks
+    default: false
