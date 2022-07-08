@@ -10,8 +10,7 @@ The way it limits these actions is by checking a player's hunger level, and if i
 ### Recommendations
 AntiAFK is designed for and works best in pair with a minigame addonx, which can be found and downloaded from [BentoBox's GitHub page](https://github.com/BentoBoxWorld).
 ### Installation procedure
-Simply drop the .jar file from the Releases page into the BentoBox/addons folder. After a restart or an addon reload you will be able to modify the addon's configuration file,
-which is located in the BentoBox/addons/AntiAFK folder. The configuration file is dynamic and is saved when the server shuts down.
+Simply drop the .jar file from the Releases page into the BentoBox/addons folder. After a restart or an addon reload you will be able to modify the addon's configuration file, which is located in the BentoBox/addons/AntiAFK folder. The configuration file is dynamic and is saved when the server shuts down or the addon reloads.
 ## Contributions
 AntiAFK is my very first BentoBox addon, so all contributions that can improve upon the concept of the plugin are appreciated. The best way to contribute is via [pull requests](https://github.com/therealdgrew/AntiAFK/pulls),
 however if you just want to report a bug or suggest a feature then head over to the project's [issue tracker](https://github.com/therealdgrew/AntiAFK/issues).
