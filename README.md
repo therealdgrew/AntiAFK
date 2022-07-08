@@ -6,7 +6,7 @@ AntiAFK is a [BentoBox](https://github.com/BentoBoxWorld/BentoBox) addon designe
 * Java 16 or higher
 * BentoBox 1.16.6 or higher
 ### Recommendations
-AntiAFK is designed for and works best in pair with a minigame addon, which can be found and downloaded from [BentoBox's GitHub page] (https://github.com/BentoBoxWorld).
+AntiAFK is designed for and works best in pair with a minigame addon, which can be found and downloaded from [BentoBox's GitHub page](https://github.com/BentoBoxWorld).
 ### Installation procedure
 Simply drop the .jar file from the Releases page into the BentoBox/addons folder. After a restart or an addon reload, you will be able to modify the addon's configuration file, which is located in the BentoBox/addons/AntiAFK folder. The configuration file is dynamic and is saved when the server shuts down or the addon reloads.
 ## Contributions
