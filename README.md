@@ -1,6 +1,6 @@
 # AntiAFK
 ## About AntiAFK
-AntiAFK is a [BentoBox](https://github.com/BentoBoxWorld/BentoBox) addon designed to prevent farming and fishing actions while AFK. It utilizes Minecraft's hunger mechanic to block block breaking and fishing, which are the most common ways of earning income on SkyBlock servers. The way it limits these actions is by checking a player's hunger level, and if it's below a certain level, it prohibits them from doing the actions described above.
+AntiAFK is a [BentoBox](https://github.com/BentoBoxWorld/BentoBox) addon designed to prevent farming and fishing actions while AFK. It utilizes Minecraft's hunger mechanic to limit block breaking and fishing, which are the most common ways of earning income on SkyBlock servers. The way it limits these actions is by checking a player's hunger level, and if it's below a certain level, it prohibits them from doing the actions described above.
 ## Installation
 ### Requirements
 * Java 16 or higher
