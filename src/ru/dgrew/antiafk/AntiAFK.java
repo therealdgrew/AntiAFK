@@ -17,8 +17,8 @@ import world.bentobox.bentobox.database.objects.Island;
 
 public class AntiAFK extends Addon implements Listener {
     private Settings settings;
-    private final Map<User, Integer> playerBlockCounter = new HashMap<>();
-    private final Map<User, Integer> playerFishingCount = new HashMap<>();
+    private Map<User, Integer> playerBlockCounter = new HashMap();
+    private Map<User, Integer> playerFishingCount = new HashMap();
     private String prefix;
     private int blockCount;
     private int fishingCount;
@@ -74,7 +74,7 @@ public class AntiAFK extends Addon implements Listener {
         User u = User.getInstance(e.getPlayer());
         if (u.hasPermission("antiafk.bypass")) { e.setCancelled(false); return; }
         Island island = getIslands().getIslandAt(u.getLocation()).orElse(null);
-        if (island != null) if (!island.getMemberSet().contains(u.getUniqueId())) { e.setCancelled(true); return; }
+        if (!island.getMemberSet().contains(u.getUniqueId())) { e.setCancelled(true); return; }
         for(String s : blockList) {
             if (e.getBlock().getType().equals(Material.getMaterial(s))) {
                 e.setCancelled(false);
@@ -86,11 +86,10 @@ public class AntiAFK extends Addon implements Listener {
             u.sendMessage(prefix + blockmsg);
             return;
         }
-        Integer blocks = this.playerBlockCounter.getOrDefault(u, 0);
+        Integer blocks = (Integer)this.playerBlockCounter.getOrDefault(u, 0);
         blocks = blocks + 1;
         if (blocks >= this.blockCount) {
-            if (u.getPlayer().getSaturation() <= 0f) u.getPlayer().setFoodLevel(u.getPlayer().getFoodLevel() - 1);
-            else u.getPlayer().setSaturation(u.getPlayer().getSaturation() - 1f);
+            u.getPlayer().setFoodLevel(u.getPlayer().getFoodLevel() - 1);
             blocks = 0;
         }
         this.playerBlockCounter.put(u, blocks);
@@ -105,11 +104,10 @@ public class AntiAFK extends Addon implements Listener {
                 u.sendMessage(prefix + fishmsg);
             }
         } else if ((fishingState == PlayerFishEvent.State.CAUGHT_ENTITY || fishingState == PlayerFishEvent.State.CAUGHT_FISH)) {
-            Integer fishedEntities = this.playerFishingCount.getOrDefault(u, 0);
+            Integer fishedEntities = (Integer)this.playerFishingCount.getOrDefault(u, 0);
             fishedEntities = fishedEntities + 1;
             if (fishedEntities >= this.fishingCount) {
-                if (u.getPlayer().getSaturation() <= 0f) u.getPlayer().setFoodLevel(u.getPlayer().getFoodLevel() - 1);
-                else u.getPlayer().setSaturation(u.getPlayer().getSaturation() - 1f);
+                u.getPlayer().setFoodLevel(u.getPlayer().getFoodLevel() - 1);
                 fishedEntities = 0;
             }
             this.playerFishingCount.put(u, fishedEntities);
