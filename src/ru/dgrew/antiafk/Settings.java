@@ -6,7 +6,7 @@ import java.util.List;
 
 @StoreAt(filename= "config.yml", path="addons/AntiAFK")
 public class Settings implements ConfigObject {
-    @ConfigComment("IslandFlyAddon Configuration [version]")
+    @ConfigComment("AntiAFK Configuration [version]")
     @ConfigComment("General settings")
     @ConfigComment("This allows you to change the messages prefix.")
 
